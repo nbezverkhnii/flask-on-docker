@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content_1 %}
+    <table id="data" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Hero Name</th>
+            <th>Hero Power</th>
+            <th>Is Villain</th>
+            <th>Deceased Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for hero in data.heroes %}
+            <tr>
+              <td>{{ hero.id }}</td>
+              <td>{{ hero.hero_name }}</td>
+              <td>{{ hero.hero_power }}</td>
+              <td>{{ hero.is_villain }}</td>
+              <td>{{ hero.deceased_date }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+  </table>
+{% endblock %}
+
+{% block content_2 %}
+    <table id="data" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Hero Id</th>
+            <th>Year</th>
+            <th>Text</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for winner in data.winners %}
+            <tr>
+              <td>{{ winner.id }}</td>
+              <td>{{ winner.hero_id }}</td>
+              <td>{{ winner.year }}</td>
+              <td>{{ winner.text }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+  </table>
+{% endblock %}

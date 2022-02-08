@@ -32,3 +32,4 @@ services:
 volumes:
   postgres_data_prod:
   static_volume:
+  templates_volume:
