@@ -41,17 +41,12 @@ class Chronicles(db.Model):
     superhero = relationship("SuperHeroes", back_populates="chronicle")
 
 
-@app.route("/heroes")
+@app.route("/")
 def index():
     heroes = SuperHeroes.query.order_by(SuperHeroes.id.desc())
-    winners = Chronicles.query.order_by(SuperHeroes.id.desc())
+    winners = Chronicles.query.order_by(Chronicles.id.desc())
     data = {
         'heroes': heroes,
         'winners': winners
     }
     return render_template('index.html', data=data)
-
-
-@app.route("/static/<path:filename>")
-def staticfiles(filename):
-    return send_from_directory(app.config["STATIC_FOLDER"], filename)

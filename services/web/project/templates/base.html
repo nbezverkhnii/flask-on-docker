@@ -10,17 +10,27 @@
     <title>Title</title>
 </head>
 <body>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-sm">
-          {% block content_1 %} {% endblock %}
+    <div style="background: url(https://media.comicbook.com/2016/03/civilwar-176062.jpg)" class="page-holder bg-cover">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-12 mx-auto">
+                    <div class="container container-table">
+                        <div class="row" style="background-color: white">
+                            <div class="col-sm">
+                                <h2>Superheroes</h2>
+                              {% block content_1 %} {% endblock %}
+                            </div>
+                            <div class="col-sm">
+                                <h2>Results</h2>
+                              {% block content_2 %} {% endblock %}
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm">
-          {% block content_2 %} {% endblock %}
-        </div>
-      </div>
     </div>
+
 
 
 </body>
