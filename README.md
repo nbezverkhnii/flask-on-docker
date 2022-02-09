@@ -10,3 +10,4 @@ docker-compose -f docker-compose.prod.yml exec web python manage.py seed_db
 
 
 And open http://localhost:1337/
+
