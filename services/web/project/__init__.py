@@ -1,7 +1,7 @@
 from flask import Flask, render_template, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import create_engine, Column, Integer, Boolean, String, DateTime, ForeignKey, SmallInteger, CheckConstraint
-from sqlalchemy.orm import declarative_base, sessionmaker, relationship
+from sqlalchemy import Column, Integer, Boolean, String, DateTime, ForeignKey, SmallInteger, CheckConstraint
+from sqlalchemy.orm import relationship
 
 
 app = Flask(__name__)
