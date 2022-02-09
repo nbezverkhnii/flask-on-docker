@@ -1,4 +1,4 @@
-Do it:
+Do it in your Terminal:
 
 docker-compose -f docker-compose.prod.yml down -v
 
